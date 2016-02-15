@@ -1,0 +1,16 @@
+var timus=null;var timecrown=0;var continuate=true;var myinterval=13;var phrases;function before()
+{var kfc="Crown System : Veuillez entrer au moins 8 phrases. Espacez chaque phrase par une étoile (*). Indiquez ci-dessous :";kfc+="<br /><br /><input type='text' id='phh' size='45'/>";kfc+="<br /><br />Interval par défaut entre chaque envoi, 13 secondes, changez ci-contre.";kfc+="<input type='text' id='pht' size='2' value='13'/>";kfc+="<br><br><input type='button' value='Démarrer' onclick='after();'/>";kfc+="<input type='button' value='Stopper'  onclick='clearTimeout(timus);disparu();'/>";errora(-20000,180,250,kfc,450);}
+function after()
+{var jjj=document.getElementById("phh").value.split("*");var fff=parseInt(document.getElementById("pht").value);var ccc=true;if((fff>4)&&(fff<15))
+myinterval=fff;if(jjj.length<7)
+ccc=false;if(ccc){phrases=jjj;disparu();timus=setTimeout(crown,1000);}else
+messig("Il manque des phrases, minimum : 8 phrases. Rajoutez en!");}
+function crown()
+{clearTimeout(timus);timecrown++;if((timecrown%myinterval==0)&&(continuate))
+{var s2="";var s1=salnom[Math.floor(Math.random()*salnom.length)]+": "+phrases[Math.floor(Math.random()*phrases.length)];var huu=salnom[Math.floor(Math.random()*salnom.length)].substring(0,myXP).toLowerCase()+"-1-";if(myXP<4)
+huu="";s1=transmiley(s1);s2=writo(s1);agir("95"+aqui+String.fromCharCode(65+Math.floor(Math.random()*salcoul.length))+huu+s2);aqui=999999;}
+if(30*60==timecrown)
+continuate=false;if((30*60*2)==timecrown)
+continuate=true;if((30*60*2+ 60)==timecrown)
+continuate=false;timus=setTimeout(crown,1000);}
+encoin("<div "+roug+" onclick='before();'>ROBOT</div>");
